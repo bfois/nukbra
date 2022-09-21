@@ -71,7 +71,6 @@ function onRequestHanler(){
         const HTMLResponse = document.querySelector("#copas")
 
         const check = data.brawlers
-        console.log(check[1])
         function encontrar(){
             for(let i= 0;i<60;i++){
                 if(check[i].name == splitcont[0]){
