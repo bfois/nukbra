@@ -5,6 +5,7 @@ const xhr = new XMLHttpRequest();
 function onRequestHanler(){
     if(this.readyState==4 && this.status==200){
         const data = JSON.parse(this.response);
+        console.log(data)
         const HTMLResponse = document.querySelector("#brawler")
         
         function contiene(){
@@ -15,22 +16,22 @@ function onRequestHanler(){
             const e = data.items[0].battle.teams[1][1].tag
             const f = data.items[0].battle.teams[1][2].tag
             if(a=="#QRUQQLV0"){
-                return "Brawler:" + " " + data.items[0].battle.teams[0][0].brawler.name +" "+"<img src='img/trophy.png' width=100px;>"+"COPAS:" + " " + data.items[0].battle.teams[0][0].brawler.trophies
+                return  data.items[0].battle.teams[0][0].brawler.name +" "+":" + " "+data.items[0].battle.teams[0][0].brawler.trophies
             }
             else if(b=="#QRUQQLV0"){
-                return "Brawler:" + " " + data.items[0].battle.teams[0][1].brawler.name +" "+"<img src='img/trophy.png'width=100px;>"+"COPAS:" + " " + data.items[0].battle.teams[0][1].brawler.trophies
+                return  data.items[0].battle.teams[0][1].brawler.name +" "+":"+ " "+data.items[0].battle.teams[0][1].brawler.trophies
             }
             else if(c=="#QRUQQLV0"){
-                return "Brawler:" + " " + data.items[0].battle.teams[0][2].brawler.name +" "+"<img src='img/trophy.png' width=100px;>"+"COPAS:" + " " + data.items[0].battle.teams[0][2].brawler.trophies
+                return data.items[0].battle.teams[0][2].brawler.name +" "+":" + " "+data.items[0].battle.teams[0][2].brawler.trophies
             }
             else if(d=="#QRUQQLV0"){
-                return "Brawler:" + " " + data.items[0].battle.teams[1][0].brawler.name +" "+"<img src='img/trophy.png' width=100px;>"+"COPAS:" + " " + data.items[0].battle.teams[1][0].brawler.trophies
+                return data.items[0].battle.teams[1][0].brawler.name +" "+":" +" "+ data.items[0].battle.teams[1][0].brawler.trophies
             }
             else if(e=="#QRUQQLV0"){
-                return "Brawler:" + " " + data.items[0].battle.teams[1][1].brawler.name +" "+"<img src='img/trophy.png' width=100px;>"+"COPAS:" + " " + data.items[0].battle.teams[1][1].brawler.trophies
+                return  data.items[0].battle.teams[1][1].brawler.name +" "+":" + " "+data.items[0].battle.teams[1][1].brawler.trophies
             }
             else if(f=="#QRUQQLV0"){
-                return "Brawler:" + " " + data.items[0].battle.teams[1][2].brawler.name +" "+"<img src='img/trophy.png' width=100px;>"+"COPAS:" + " " + data.items[0].battle.teams[1][2].brawler.trophies
+                return data.items[0].battle.teams[1][2].brawler.name +" "+":" + " "+data.items[0].battle.teams[1][2].brawler.trophies
             }
             
             }
@@ -44,13 +45,14 @@ function onRequestHanler(){
             function onRequestHanler(){
                 if(this.readyState==4 && this.status==200){
                     const data = JSON.parse(this.response);
+                    console.log(data)
                     const HTMLResponse = document.querySelector("#img")
                     let list = data.brawlers
                         
                     function encontrar(){
                         let stringVacio=""
                         for(let i = 0;i<list.length;i++){
-                            if(list[i] == splitcont[1]){
+                            if(list[i] == splitcont[0]){
                                 stringVacio = list[i]
                               const nuevoString =stringVacio[0] + stringVacio.slice(1).toLowerCase()
                                return nuevoString
