@@ -9,7 +9,7 @@ function onRequestHanler(){
         const data = JSON.parse(this.response);
         const HTMLResponse = document.querySelector("#app")
         
-        HTMLResponse.innerHTML = `<img src='img/trophy.png' width=100px;>TROFEOS: ${data.trophies}`
+        HTMLResponse.innerHTML = `<img src="img/trophy.png" width="100px">TROFEOS: ${data.trophies}`
     }
 }
 xhr.addEventListener('load',onRequestHanler);
