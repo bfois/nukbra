@@ -8,7 +8,7 @@ function onRequestHanler(){
         console.log(data)
         const HTMLResponse = document.querySelector("#app")
         
-        HTMLResponse.innerHTML = `<img src='img/perfil.jpg' width=100px;>${data.name}<br> <img src='img/trophy.png' width=100px;>TROFEOS: ${data.trophies}`
+        HTMLResponse.innerHTML = `<img src='img/trophy.png' width=100px;>TROFEOS: ${data.trophies}`
     }
 }
 xhr.addEventListener('load',onRequestHanler);
