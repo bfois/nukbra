@@ -1,0 +1,32 @@
+html, body{
+    height: 100vh;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+*{
+    font-size: 50px;
+    font-weight:bolder;
+}
+#app{
+    display: block;
+    padding: 5px;
+    text-align: center;
+}
+#brawler{
+    padding: 5px;
+    display: inline-block;
+    
+}
+#img{
+    padding: 5px;
+    display: inline-block;
+   
+}
+#conjunto{
+    
+    padding: 5px;
+    text-align: center;
+}
