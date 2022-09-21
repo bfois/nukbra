@@ -5,7 +5,7 @@ const xhr = new XMLHttpRequest();
 function onRequestHanler(){
     if(this.readyState==4 && this.status==200){
         const data = JSON.parse(this.response);
-        console.log(data)
+        
         const HTMLResponse = document.querySelector("#brawler")
         
         function contiene(){
@@ -16,22 +16,21 @@ function onRequestHanler(){
             const e = data.items[0].battle.teams[1][1].tag
             const f = data.items[0].battle.teams[1][2].tag
             if(a=="#QRUQQLV0"){
-                return  data.items[0].battle.teams[0][0].brawler.name +" "+":" + " "+data.items[0].battle.teams[0][0].brawler.trophies
+                return  data.items[0].battle.teams[0][0].brawler.name
             }
             else if(b=="#QRUQQLV0"){
-                return  data.items[0].battle.teams[0][1].brawler.name +" "+":"+ " "+data.items[0].battle.teams[0][1].brawler.trophies
+                return  data.items[0].battle.teams[0][1].brawler.name
             }
             else if(c=="#QRUQQLV0"){
-                return data.items[0].battle.teams[0][2].brawler.name +" "+":" + " "+data.items[0].battle.teams[0][2].brawler.trophies
+                return data.items[0].battle.teams[0][2].brawler.name 
             }
             else if(d=="#QRUQQLV0"){
-                return data.items[0].battle.teams[1][0].brawler.name +" "+":" +" "+ data.items[0].battle.teams[1][0].brawler.trophies
-            }
+                return data.items[0].battle.teams[1][0].brawler.name }
             else if(e=="#QRUQQLV0"){
-                return  data.items[0].battle.teams[1][1].brawler.name +" "+":" + " "+data.items[0].battle.teams[1][1].brawler.trophies
+                return  data.items[0].battle.teams[1][1].brawler.name 
             }
             else if(f=="#QRUQQLV0"){
-                return data.items[0].battle.teams[1][2].brawler.name +" "+":" + " "+data.items[0].battle.teams[1][2].brawler.trophies
+                return data.items[0].battle.teams[1][2].brawler.name 
             }
             
             }
@@ -45,7 +44,7 @@ function onRequestHanler(){
             function onRequestHanler(){
                 if(this.readyState==4 && this.status==200){
                     const data = JSON.parse(this.response);
-                    console.log(data)
+                    
                     const HTMLResponse = document.querySelector("#img")
                     let list = data.brawlers
                         
@@ -60,6 +59,35 @@ function onRequestHanler(){
                         }
                         
                     }
+                    //aca
+const API_URL4 = "https://cr.is-a.dev/QRUQQLV0";
+
+const xhr = new XMLHttpRequest();
+
+function onRequestHanler(){
+    if(this.readyState==4 && this.status==200){
+        const data = JSON.parse(this.response);
+        console.log(data)
+        const HTMLResponse = document.querySelector("#copas")
+
+        const check = data.brawlers
+        console.log(check[1])
+        function encontrar(){
+            for(let i= 0;i<60;i++){
+                if(check[i].name == splitcont[0]){
+                    const trofeosBrawl = check[i].trophies
+                    return trofeosBrawl
+                }
+            }
+        }
+        HTMLResponse.innerHTML = `${encontrar()}`
+    }
+  
+}
+xhr.addEventListener('load',onRequestHanler);
+xhr.open('GET',API_URL4);
+xhr.send();
+//hasta aca
                     
                     let linkbrawl = `<img src="https://cdn.brawlify.com/brawler/${encontrar()}.png" width=100px>`
                     
@@ -76,4 +104,5 @@ function onRequestHanler(){
 xhr.addEventListener('load',onRequestHanler);
 xhr.open('GET',API_URL1);
 xhr.send();
+
 

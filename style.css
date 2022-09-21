@@ -30,3 +30,6 @@ body{
     padding: 5px;
     text-align: center;
 }
+#copas{
+    display: inline-block;
+}
