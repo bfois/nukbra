@@ -1,3 +1,4 @@
+setInterval(()=>{
 const API_URL1 = "https://cr.is-a.dev/v1/battlelog/QRUQQLV0";
 
 const xhr = new XMLHttpRequest();
@@ -104,4 +105,4 @@ xhr.addEventListener('load',onRequestHanler);
 xhr.open('GET',API_URL1);
 xhr.send();
 
-
+},10000);

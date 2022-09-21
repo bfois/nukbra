@@ -1,4 +1,5 @@
 //aca
+setInterval(()=>{
 const API_URL = "https://cr.is-a.dev/QRUQQLV0";
 
 const xhr = new XMLHttpRequest();
@@ -15,3 +16,4 @@ xhr.addEventListener('load',onRequestHanler);
 xhr.open('GET',API_URL);
 xhr.send();
 //hasta aca
+},10000)
