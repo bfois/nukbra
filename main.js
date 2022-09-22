@@ -16,4 +16,4 @@ xhr.addEventListener('load',onRequestHanler);
 xhr.open('GET',API_URL);
 xhr.send();
 //hasta aca
-},10000)
+},5000)
