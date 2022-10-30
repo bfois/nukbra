@@ -2,7 +2,7 @@ html, body{
     height: 100vh;
 }
 body{
-    color:#B1FEFF;
+    color:white;
     display: flex;
     justify-content: center;
     align-items: center;
