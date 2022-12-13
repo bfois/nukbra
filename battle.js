@@ -72,7 +72,7 @@ function onRequestHanler(){
 
         const check = data.brawlers
         function encontrar(){
-            for(let i= 0;i<60;i++){
+            for(let i= 0;i<80;i++){
                 if(check[i].name == splitcont[0]){
                     const trofeosBrawl = check[i].trophies
                     return trofeosBrawl
